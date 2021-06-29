@@ -4,6 +4,10 @@ plugins {
     `kotlin-jvm`
 }
 
+kotlin.sourceSets.all {
+    kotlin.srcDirs("$buildDir/generated/ksp/main/kotlin")
+}
+
 dependencies {
     implementation(project(":processor"))
     ksp(project(":processor"))
