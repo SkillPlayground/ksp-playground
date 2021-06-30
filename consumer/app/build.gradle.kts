@@ -9,6 +9,9 @@ kotlin.sourceSets.all {
 }
 
 dependencies {
-    implementation(project(":processor"))
-    ksp(project(":processor"))
+    implementation(projects.consumer.internal)
+    implementation(projects.consumer.open)
+
+    implementation(projects.processor.annotations)
+    ksp(projects.processor.compiler)
 }
